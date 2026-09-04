@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#256CA2">
+  <title>Pagamento Pix — GLYAH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="checkout-page">
+  <header class="site-header">
+    <a class="brand" href="index.html#inicio"><span class="brand-mini">✦</span><span>GLYAH</span></a>
+    <a class="text-link" href="index.html#kits">Voltar aos kits <span>←</span></a>
+  </header>
+  <main class="checkout-main">
+    <div class="checkout-intro">
+      <div class="section-label"><span>Pagamento</span><p>Checkout seguro</p></div>
+      <h1>Finalize com<br><em>Pix.</em></h1>
+      <p>Você está a um passo de começar uma nova experiência de acolhimento e conexão.</p>
+    </div>
+    <section class="pix-card" aria-label="Pagamento via Pix">
+      <div class="pix-card-head"><span class="pix-badge">PIX</span><span class="secure-mark">✓ Compra segura</span></div>
+      <p class="selected-kit-label">Seu kit</p>
+      <h2 id="selected-kit">Kit GLYAH</h2>
+      <div class="pix-price"><span>Total</span><strong>R$ 650,00</strong></div>
+      <div class="qr-placeholder" aria-label="Área reservada para QR Code Pix"><span>QR</span><small>QR Code Pix<br>será disponibilizado aqui</small></div>
+      <p class="pix-instruction">Copie a chave Pix abaixo e conclua o pagamento no aplicativo do seu banco.</p>
+      <div class="pix-key-row"><input id="pix-key" readonly value="chave-pix@glyah.com.br"><button id="copy-pix" type="button">Copiar</button></div>
+      <small class="pix-note">Após o pagamento, envie o comprovante para o suporte da GLYAH para confirmarmos seu pedido.</small>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html#inicio"><span class="brand-mini">✦</span><span>GLYAH</span></a><p>© 2026 GLYAH. Feito para incluir.</p></footer>
+  <div class="toast" role="status">Chave Pix copiada <span>✓</span></div>
+  <script>
+    const savedKit = localStorage.getItem("glyah-kit");
+    if (savedKit) document.querySelector("#selected-kit").textContent = savedKit;
+    const toast = document.querySelector(".toast");
+    document.querySelector("#copy-pix").addEventListener("click", async () => {
+      const key = document.querySelector("#pix-key").value;
+      try { await navigator.clipboard.writeText(key); } catch (error) { document.querySelector("#pix-key").select(); document.execCommand("copy"); }
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2200);
+    });
+  </script>
+</body>
+</html>
