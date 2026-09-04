@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coleção e valores das roupas CARLOS.">
+  <title>Produtos & Preços — CARLOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="pricing">
+  <div class="announcement"><span>Frete grátis para todo o Brasil em pedidos acima de R$ 299</span><span class="announcement-dot">•</span><span>Troca descomplicada em até 30 dias</span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Página inicial GLYAH"><img src="glyah-logo.png" alt="Logo GLYAH"><span>GLYAH</span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="index.html#colecao">Coleção</a><a class="active" href="pricing.html">Preços</a><a href="sobre.html">A Carlos</a></nav>
+    <div class="header-actions"><button class="search-button" aria-label="Pesquisar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.2 4.2"/></svg></button><button class="bag-button" aria-label="Abrir sacola"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1 11h-11z"/><path d="M9 9V6.6a3 3 0 0 1 6 0V9"/></svg><span class="cart-count">0</span></button><button class="menu-button" aria-label="Abrir menu"><span></span><span></span></button></div>
+  </header>
+  <main>
+    <section class="products-hero section-pad"><p class="eyebrow reveal">Coleção 01 — Primavera / Verão</p><h1 class="reveal">Feitas para<br><em>entrar na sua rotina.</em></h1><p class="products-hero-copy reveal">Peças versáteis em materiais que envelhecem bem. Escolha o que fica.</p></section>
+    <section class="catalog section-pad">
+      <div class="catalog-toolbar"><p><span class="product-total">08</span> peças disponíveis</p><div class="filter-row" aria-label="Filtrar produtos"><button class="filter active" data-filter="todos">Todos</button><button class="filter" data-filter="masculino" id="masculino">Masculino</button><button class="filter" data-filter="feminino" id="feminino">Feminino</button><button class="filter" data-filter="acessorios" id="acessorios">Acessórios</button></div></div>
+      <div class="products-grid catalog-grid" data-products="all"></div>
+    </section>
+    <section class="service-band"><div><span>01</span><h3>Envio cuidadoso</h3><p>Seu pedido preparado em até 2 dias úteis.</p></div><div><span>02</span><h3>Troca sem drama</h3><p>Você tem 30 dias para decidir.</p></div><div><span>03</span><h3>Feito para durar</h3><p>Qualidade que se revela com o tempo.</p></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><img src="glyah-logo.png" alt="Logo GLYAH"><span>GLYAH</span></a><div class="footer-links"><a href="sobre.html">Nossa história</a><a href="pricing.html">Produtos</a><a href="instagram.html">Instagram</a><a href="#">Ajuda</a></div><p>© 2026 Carlos. Feito no Brasil.</p></footer>
+  <aside class="cart-drawer" aria-label="Sua sacola" aria-hidden="true"><div class="drawer-head"><h2>Sua sacola <span class="drawer-count">(0)</span></h2><button class="drawer-close" aria-label="Fechar sacola">×</button></div><div class="cart-items"><p class="empty-cart">Sua sacola está esperando por uma boa escolha.</p></div><div class="drawer-footer"><div><span>Subtotal</span><strong class="cart-total">R$ 0,00</strong></div><button class="button button-dark checkout">Finalizar compra <span>→</span></button></div></aside><div class="drawer-backdrop"></div><div class="toast" role="status">Adicionado à sacola <span>✓</span></div>
+  <script src="script.js"></script>
+</body>
+</html>
